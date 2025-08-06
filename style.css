@@ -13,8 +13,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #f7f7f7 url('./assets/images/pine-wood-texture.jpg') center/cover no-repeat fixed; /* Pine wood texture */
-    background-size: cover; /* Ensure the background image covers the entire body */
+    background: #f7f7f7 url('./assets/images/pine-wood-texture.jpg') center/cover no-repeat fixed; /* Fallback */
+    background: #f7f7f7 url('./assets/images/pine-wood-texture.webp') center/cover no-repeat fixed; /* WebP */
 }
 
 /* Hero Section */
