@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f7f7f7 url('./assets/images/pine-wood-texture.jpg') center/cover no-repeat fixed; /* Pine wood texture */
+    background-size: cover; /* Ensure the background image covers the entire body */
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+/* Image Container */
+.image-container {
+    width: 100%;
+    max-width: 80%; /* Center the image and resize to fit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; /* Space between image and text */
+}
+
+/* Hero Image */
+.background-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire PNG image is visible and doesn't get clipped */
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5)); /* Apply drop shadow */
+}
+
+/* Text Styling */
+.text-container {
+    margin-top: 40px; /* Space between the image and the text */
+}
+
+/* Title Styling */
+.first-text,
+.second-text {
+    font-family: 'Poppins', sans-serif;  /* Clean, modern font */
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 800;  /* Bold weight */
+    line-height: 1.1;
+    letter-spacing: 2px;  /* Increased spacing for a more modern look */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    color: #fff; /* White color fill */
+    background: linear-gradient(45deg, #FF5F6D, #FFC3A0); /* Gradient for depth */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.3); /* Soft shadow for lift */
+}
+
+/* First Title Animation */
+.first-text {
+    animation-delay: 0.5s; /* Fade in "It's time to play" first */
+}
+
+/* Second Title Animation */
+.second-text {
+    animation-delay: 4s; /* Fade in "Again" after a 3-second pause */
+}
+
+/* Animation for Text Fade-In */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .first-text,
+    .second-text {
+        font-size: clamp(3.5rem, 6vw, 6rem);  /* Adjust size for smaller screens */
+    }
+}
+
+/* Hover Effects for Text */
+.first-text:hover,
+.second-text:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5); /* Glowing effect on hover */
+    cursor: pointer;
+}
