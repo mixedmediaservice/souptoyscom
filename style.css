@@ -43,7 +43,7 @@ body {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the entire PNG image is visible and doesn't get clipped */
-    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5)); /* Apply drop shadow */
+    /*filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5)); /* Apply drop shadow */
 }
 
 /* Text Styling */
